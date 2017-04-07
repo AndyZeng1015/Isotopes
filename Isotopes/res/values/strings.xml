@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">同位素</string>
+    <string name="hello_world">Hello world!</string>
+
+    <string-array name="sex">
+        <item>帅哥</item>
+        <item>美女</item>
+    </string-array>
+    
+    <string name="viewpager_indicator">%1$d/%2$d</string>
+    
+    <string-array name="who_can_see">
+		<item>所有人</item>
+		<item>好友</item>
+		<item>私密</item>
+	</string-array>
+    
+    
+</resources>

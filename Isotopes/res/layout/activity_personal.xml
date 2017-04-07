@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#3cbe68"
+        android:elevation="3dp">
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="个人中心"
+            android:layout_centerInParent="true"
+            android:textColor="#fff"
+            android:textSize="22sp"/>
+        
+        <ImageView 
+            android:id="@+id/iv_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="10dp"
+            android:src="@drawable/back"/>
+        
+        <TextView 
+            android:id="@+id/tv_set"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:text="设置"/>
+        
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <ListView 
+	        android:id="@+id/lv_list"
+	        android:layout_width="match_parent"
+	        android:dividerHeight="10dp"
+	        android:layout_height="match_parent"
+	        android:divider="#E6E6E6"></ListView>
+        
+    </RelativeLayout>
+    
+</LinearLayout>

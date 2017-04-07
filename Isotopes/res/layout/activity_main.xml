@@ -1,0 +1,170 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" 
+    android:background="#a8dbf0"
+    android:orientation="vertical">
+
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#3cbe68"
+        android:elevation="3dp">
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="同位素"
+            android:layout_centerInParent="true"
+            android:textColor="#fff"
+            android:textSize="22sp"/>
+        
+        <ImageView 
+            android:id="@+id/iv_person"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/user"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"/>
+        
+    </RelativeLayout>
+    
+    <com.isotopes.appwidget.SlideShowView 
+		android:id="@+id/ss_show"
+		android:layout_width="match_parent"
+		android:layout_height="200dp"
+		android:layout_centerHorizontal="true"/>
+
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+        
+        <LinearLayout 
+            android:layout_width="120dp"
+            android:layout_height="240dp"
+            android:orientation="vertical">
+            
+            <LinearLayout 
+                android:id="@+id/ll_friend"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#0ea7cd"
+                android:gravity="center"
+                android:elevation="3dp"
+                android:orientation="horizontal">
+                
+                <ImageView 
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/friend"/>
+                
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+	                android:textSize="16sp"
+	                android:layout_marginLeft="3dp"
+	                android:textColor="#fff"
+	                android:text="好友"/>
+                
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:id="@+id/ll_square"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#79c5a0"
+                android:gravity="center"
+                android:elevation="3dp"
+                android:orientation="horizontal">
+                
+                <ImageView 
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/square"/>
+                
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="3dp"
+                    android:textColor="#fff"
+                    android:text="照片广场"/>
+                
+            </LinearLayout>
+            
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:id="@+id/ll_search"
+            android:layout_width="120dp"
+            android:layout_height="240dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            
+            <LinearLayout 
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="#769aef"
+                android:gravity="center"
+                android:elevation="3dp"
+                android:orientation="horizontal">
+                
+                <ImageView 
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/search"/>
+                
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="3dp"
+                    android:textColor="#fff"
+                    android:text="景点搜索"/>
+                
+            </LinearLayout>
+            
+        </LinearLayout>
+        
+    </LinearLayout>
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="40dp"
+	        android:layout_alignParentBottom="true"
+	        android:gravity="center_vertical"
+	        android:background="#6dbfe1"
+	        android:orientation="horizontal">
+            
+            <ImageView 
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/notice"/>
+            
+            <TextView  
+		        android:id="@+id/tv_notice"  
+		        android:layout_width="wrap_content"  
+		        android:layout_height="wrap_content"  
+		        android:textSize="16sp"  
+		        android:layout_marginLeft="4dp"
+		        android:singleLine="true"  
+		        android:ellipsize="marquee"  
+		        android:marqueeRepeatLimit="marquee_forever"  />  
+            
+        </LinearLayout>
+        
+    </RelativeLayout>
+    
+</LinearLayout>

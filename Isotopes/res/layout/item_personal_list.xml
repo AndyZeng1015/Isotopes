@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        
+		<LinearLayout 
+		    android:id="@+id/ll_head"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    android:gravity="center_vertical"
+		    android:layout_centerVertical="true">
+		    
+		    <ImageView 
+		        android:id="@+id/iv_head"
+	            android:layout_width="50dp"
+	            android:layout_height="50dp"
+	            android:padding="6dp"
+	            android:src="@drawable/head"/>
+		    
+		    <TextView 
+		        android:id="@+id/tv_name"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="-"/>
+		    
+		</LinearLayout>  
+		
+		<ImageView 
+		    android:id="@+id/iv_like"
+		    android:layout_width="40dp"
+		    android:layout_height="40dp"
+		    android:layout_alignParentRight="true"
+		    android:padding="10dp"
+		    android:layout_centerVertical="true"
+		    android:src="@drawable/dashboard_like_off_default"/>
+        
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <ImageView 
+            android:id="@+id/iv_default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/pic_loading"/>
+        
+        <TextView 
+            android:id="@+id/tv_count"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:text="-"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_alignBottom="@id/iv_default"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="6dp"
+            android:layout_marginBottom="6dp"
+            android:textColor="#fcf8f8"
+            android:background="@drawable/personal_count_bg"/>
+        
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/rl_addr"
+        android:layout_width="match_parent"
+        android:layout_height="28dp">
+        
+        <TextView 
+            android:id="@+id/tv_addr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"
+            android:textSize="12sp"
+            android:drawablePadding="3dp"
+            android:drawableLeft="@drawable/addr_loca"
+            android:text="-"/>
+        
+    </RelativeLayout>
+    
+    <TextView 
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:textColor="#262424"
+        android:text=""/>
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/dot_divider_bg"/>
+    
+    <LinearLayout 
+        android:id="@+id/ll_like_person"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+        
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/dashboard_like_show"/>
+        
+        <TextView 
+            android:id="@+id/tv_like_person"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="14sp"
+	        android:textColor="#BFBFBF"
+	        android:drawablePadding="5dp"
+	        android:text=""/>
+        
+    </LinearLayout>
+
+</LinearLayout>

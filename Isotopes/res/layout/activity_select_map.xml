@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#3cbe68"
+        android:elevation="3dp">
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择地点"
+            android:layout_centerInParent="true"
+            android:textColor="#fff"
+            android:textSize="22sp"/>
+        
+        <ImageView 
+            android:id="@+id/iv_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="10dp"
+            android:src="@drawable/back"/>
+        
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        
+        <com.baidu.mapapi.map.MapView 
+	        android:id="@+id/bmapView"
+		    android:layout_width="fill_parent" 
+		    android:layout_height="fill_parent" 
+		    android:clickable="true"
+		    android:background="#fff"/>
+        
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/dgp_map_point_pin_green"/>
+        
+        <ImageView 
+            android:id="@+id/iv_location_now"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/home_map_btn_crosshair"/>
+        
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <ListView 
+            android:id="@+id/lv_addr_list"
+            android:layout_width="match_parent"
+            android:background="#ffffff"
+            android:layout_height="match_parent"></ListView>
+
+        <ProgressBar
+            android:id="@+id/pb_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_centerInParent="true"/>
+        
+        <TextView 
+            android:visibility="gone"
+            android:id="@+id/tv_nodata"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="抱歉，未能找到结果"
+            android:textSize="26sp"
+            android:gravity="center"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

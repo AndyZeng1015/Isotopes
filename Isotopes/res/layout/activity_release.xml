@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECECEC"
+    android:orientation="vertical" >
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#3cbe68"
+        android:elevation="3dp">
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="照片分享"
+            android:layout_centerInParent="true"
+            android:textColor="#fff"
+            android:textSize="22sp"/>
+        
+        <TextView 
+            android:id="@+id/tv_send"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:text="发布"/>
+        
+        <ImageView 
+            android:id="@+id/iv_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="10dp"
+            android:src="@drawable/back"/>
+        
+    </RelativeLayout>
+    
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="#fff"
+	    android:orientation="vertical">
+	    
+	    <EditText 
+	        android:id="@+id/et_title"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:minHeight="360px"
+	        android:gravity="top|left"
+	        android:background="@null"
+	        android:padding="10dp"
+	        android:textSize="16sp"
+	        android:hint="说点什么吧..."/>
+	    
+	    <com.isotopes.appwidget.MyGridView
+	        android:id="@+id/gv_pic_list"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:horizontalSpacing="3dp"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp"
+	        android:numColumns="4"
+	        android:verticalSpacing="3dp"></com.isotopes.appwidget.MyGridView>
+	    
+	    <View 
+	        android:layout_width="match_parent"
+	        android:layout_height="1dp"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp"
+	        android:layout_marginTop="16dp"
+	        android:background="#E9E9EA"/>
+	    
+	    <RelativeLayout 
+	        android:id="@+id/rl_addr"
+	        android:layout_width="match_parent"
+	        android:layout_marginTop="5dp"
+	        android:padding="5dp"
+	        android:layout_height="50dp">
+	        
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="10dp"
+	            android:layout_centerVertical="true"
+	            android:textSize="16sp"
+	            android:textColor="#050505"
+	            android:text="地点"/>
+	        
+	        <TextView 
+	            android:id="@+id/tv_addr"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	            android:layout_centerVertical="true"
+	            android:gravity="center"
+	            android:drawableRight="@drawable/more"/>
+	        
+	    </RelativeLayout>
+
+	</LinearLayout>    
+	
+	<RelativeLayout 
+	    android:id="@+id/rl_show_to"
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="#fff">
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:textColor="#050505"
+            android:text="谁能看见"/>
+        
+        <Spinner 
+            android:id="@+id/sp_power"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:entries="@array/who_can_see"
+            android:gravity="center"/>
+        
+    </RelativeLayout>
+    
+
+</LinearLayout>

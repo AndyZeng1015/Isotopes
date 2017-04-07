@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.isotopes"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="24" />
+    
+    <!--允许联网 --> 
+	<uses-permission android:name="android.permission.INTERNET" /> 
+	<!--获取GSM（2g）、WCDMA（联通3g）等网络状态的信息  --> 
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> 
+	<!--获取wifi网络状态的信息 --> 
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> 
+	<!--保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载 -->
+	<uses-permission android:name="android.permission.WAKE_LOCK" /> 
+	<!--获取sd卡写的权限，用于文件上传和下载-->
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<!--允许读取手机状态 用于创建BmobInstallation--> 
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	
+	<uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+	<!-- 开启闪光灯权限 -->
+	<uses-permission android:name="android.permission.FLASHLIGHT" />
+	
+	<uses-feature android:name="android.hardware.camera" />
+	<uses-feature android:name="android.hardware.camera.autofocus" />
+	<uses-feature android:name="android.hardware.camera.flash" />
+
+    <application
+        android:name="com.isotopes.base.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:hardwareAccelerated="true"
+    	android:largeHeap="true"
+        android:theme="@style/AppTheme" >
+        
+        <activity
+		    android:name="org.lasque.tusdk.impl.activity.TuFragmentActivity"
+		    android:configChanges="keyboardHidden|orientation|screenSize"
+		    android:screenOrientation="portrait"
+		    android:windowSoftInputMode="stateHidden|adjustResize" />
+        
+        <activity android:name="com.hyphenate.easeui.ui.EaseBaiduMapActivity"></activity>
+        <activity android:name="com.hyphenate.easeui.ui.EaseShowBigImageActivity"></activity>
+        <activity android:name="com.hyphenate.easeui.ui.EaseShowNormalFileActivity"></activity>
+        <activity android:name="com.hyphenate.easeui.ui.EaseShowVideoActivity"></activity>
+        
+        <activity
+            android:name="com.isotopes.activities.SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+       <activity android:name="com.isotopes.activities.MainActivity">
+           
+       </activity>
+       <activity android:name="com.isotopes.activities.WebViewActivity"></activity>
+       <activity android:name="com.isotopes.activities.LoginActivity"></activity>
+       <activity android:name="com.isotopes.activities.RegisterActivity"></activity>
+       <activity android:name="com.isotopes.activities.PersonalActivity"></activity>
+       <activity android:name="com.isotopes.activities.FriendActivity" android:windowSoftInputMode="adjustPan"></activity>
+       <activity android:name="com.isotopes.activities.ChatActivity"></activity>
+       <activity android:name="com.isotopes.activities.UpdatePersonalActivity"></activity>
+       <activity android:name="com.isotopes.activities.SquareActivity"></activity>
+       <activity android:name="com.isotopes.activities.ReleaseActivity"></activity>
+       <activity android:name="com.isotopes.activities.SelectAddrMapActivity"></activity>
+       <activity android:name="com.isotopes.activities.PreviewPhotoActivity"></activity>
+       <activity android:name="com.isotopes.activities.SettingActivity"></activity>
+       <activity android:name="com.isotopes.activities.ChangePasswordActivity"></activity>
+       <activity android:name="com.isotopes.activities.ShowCustomerDetailActivity"></activity>
+       <activity android:name="com.isotopes.activities.HotSpotsActivity"></activity>
+       <activity android:name="com.isotopes.activities.HotSpotsListActivity"></activity>
+       <activity android:name="com.isotopes.activities.HotSpotsDetailActivity"></activity>
+       
+       <!-- 设置环信应用的appkey -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="1141161009115732#com.isotopes" />
+        <!-- 声明sdk所需的service -->
+        <service
+            android:name="com.hyphenate.chat.EMChatService"
+            android:exported="true" />
+        <!-- 声明sdk所需的receiver -->
+        <receiver android:name="com.hyphenate.chat.EMMonitorReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+            <!-- 可选filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 百度地图所需的service -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="3ecea51f560650b1ed8a4b99808f52e8" />
+        
+    </application>
+
+</manifest>

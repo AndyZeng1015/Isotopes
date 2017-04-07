@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/ll_search"
+              android:layout_width="match_parent"
+              android:layout_height="35dp"
+              android:layout_marginLeft="10dp"
+              android:layout_marginRight="10dp"
+              android:layout_marginTop="10dp"
+              android:gravity="center"
+              
+              android:orientation="horizontal">
+
+    <EditText
+        android:id="@+id/et_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:hint="景点关键字"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:background="@drawable/message_tv_bg_normal"
+        android:textColor="#656565"/>
+    
+    <Button 
+        android:id="@+id/btn_search"
+        android:layout_width="60dp"
+        android:layout_marginLeft="5dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:text="搜索"
+        android:textColor="#fff"
+        android:background="@drawable/em_button_login_bg"/>
+    
+</LinearLayout>
